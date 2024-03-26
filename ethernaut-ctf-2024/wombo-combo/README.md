@@ -67,14 +67,14 @@ sequenceDiagram
     participant T as Target
     A-)C: makes func call
     Note over A,C: msg.value = 1
-    rect rgb(0,0,0)
+    rect rgb(140, 140, 140)
     C-)T: target.call(abi.encodeWithSelector(selector, params))
     Note over C,T: msg.sender = Caller<br/> msg.value = 0<br/>because call invocation did not pass in any msg.value
     end
     C--)A: retval
     A-)C: makes func call
     Note over A,C: msg.value = 1
-    rect rgb(0,0,0)
+    rect rgb(140, 140, 140)
     C-)T: target.delegatecall(abi.encodeWithSelector(selector, params))
     T--)C: updates
     Note over C,T: msg.sender = 0x123<br/> msg.value = 1
@@ -91,7 +91,7 @@ sequenceDiagram
     Actor A as 0x123
     participant S as Staking
     A-)S: makes func call
-    rect rgb(0,0,0)
+    rect rgb(140, 140, 140)
     S-)S: target.delegatecall(abi.encodeWithSelector(selector, params))
     S--)S: updates
     Note over S,S: msg.sender = 0x123
