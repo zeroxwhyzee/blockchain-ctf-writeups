@@ -223,8 +223,8 @@ Going through the same process as above, the last 20 bytes extracted in the `_ms
 - `finishAt` = `block.timestamp + 1`
 - `updatedAt` = `block.timestamp`
 
-4. Wait for some time (at least 1s) before calling the next function `getReward`. Calling this function would update `rewards[user]` to `100_000_000 * 10 ** 18` via the `updateReward` function and the `Staking` contract would subsequently transfer `100_000_000` staking tokens to the `user`. The variable `earnedTotal` would be updated as well.
-5. Transfer the staking tokens to address `0x123` and we are done.
+4. Wait for some time (at least 1s) before calling the next function `getReward`. Calling this function would update `rewards[user]` to `100_000_000 * 10 ** 18` via the `updateReward` function and the `Staking` contract would subsequently transfer `100_000_000` rewards tokens to the `user`. The variable `earnedTotal` would be updated as well.
+5. Transfer the rewards tokens to address `0x123` and we are done.
 
 The exploit I used for this challenge is [here](./WomboCombo.s.sol). After executing the exploit, we get our flag!
 
