@@ -5,3 +5,4 @@ The [Ethernaut](https://ethernaut.openzeppelin.com/) is a Web3/Solidity based wa
 These are the list of challenges I have solved:
 
 - [HigherOrder](./higher-order/README.md)
+- [Stake](./stake/README.md)
